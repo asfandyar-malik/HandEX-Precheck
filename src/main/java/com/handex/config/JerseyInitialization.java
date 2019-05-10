@@ -1,4 +1,4 @@
-package com.jersey.config;
+package com.handex.config;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.handex.config.ObjectMapperFactory;

@@ -29,12 +29,12 @@ public class SqlInitialization{
     public DataSource dataSource() {
 
         URI dbUri = null;
-        String PALSPLATE_DB_URL = System.getenv().get("PALSPLATE_DB_URL");
+        String DATABASE_URL = System.getenv().get("DATABASE_URL");
         try {
-            dbUri = new URI(PALSPLATE_DB_URL);
+            dbUri = new URI(DATABASE_URL);
         } catch (URISyntaxException e) {
             e.printStackTrace();
-            log.debug("PALSPLATE_DB_URL environment variable does not exist");
+            log.debug("DATABASE_URL environment variable does not exist");
         }
         String username = dbUri.getUserInfo().split(":")[0];
         String password = dbUri.getUserInfo().split(":")[1];
@@ -80,10 +80,12 @@ public class SqlInitialization{
         hibernateProperties.setProperty("hibernate.show_sql", "false");
         hibernateProperties.setProperty("hibernate.use_sql_comments", "false");
         hibernateProperties.setProperty("hibernate.format_sql", "false");
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "false");
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "none");
         hibernateProperties.setProperty("hibernate.generate_statistics", "false");
         hibernateProperties.setProperty("javax.persistence.validation.mode", "none");
-
+        hibernateProperties.setProperty("hibernate.generate_statistics", "false");
+        hibernateProperties.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
+        
         //Audit History flags
         hibernateProperties.setProperty("org.hibernate.envers.store_data_at_delete", "true");
         hibernateProperties.setProperty("org.hibernate.envers.global_with_modified_flag", "true");

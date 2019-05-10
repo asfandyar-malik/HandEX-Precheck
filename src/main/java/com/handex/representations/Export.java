@@ -36,7 +36,7 @@ public class Export {
     @Column(name = "industry_type")
     private String industryType;
 
-    @Column(name = "projectDescription")
+    @Column(name = "project_description")
     private String projectDescription;
 
 }
