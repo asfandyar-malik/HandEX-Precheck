@@ -85,7 +85,7 @@ public class SqlInitialization{
         hibernateProperties.setProperty("javax.persistence.validation.mode", "none");
         hibernateProperties.setProperty("hibernate.generate_statistics", "false");
         hibernateProperties.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
-        
+
         //Audit History flags
         hibernateProperties.setProperty("org.hibernate.envers.store_data_at_delete", "true");
         hibernateProperties.setProperty("org.hibernate.envers.global_with_modified_flag", "true");
