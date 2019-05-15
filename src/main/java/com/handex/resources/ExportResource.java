@@ -17,13 +17,13 @@ import javax.ws.rs.core.Response;
 @Component
 @Transactional
 public class ExportResource {
+
     private final ExportDao exportDao;
 
     @Inject
     public ExportResource(ExportDao exportDao) {
         this.exportDao = exportDao;
     }
-
 
     @GET
     @Path("public/exports/{id}")
@@ -40,5 +40,4 @@ public class ExportResource {
     public Export save(@Valid Export export) {
         return exportDao.save(export);
     }
-
 }

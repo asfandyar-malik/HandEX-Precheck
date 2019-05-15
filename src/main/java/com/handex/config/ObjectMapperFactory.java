@@ -8,6 +8,7 @@ import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 
 @Deprecated
 public class ObjectMapperFactory {
+
     private static ObjectMapper objectMapper;
     static {
         objectMapper = new ObjectMapper()

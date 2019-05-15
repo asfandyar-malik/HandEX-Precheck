@@ -25,7 +25,6 @@ public class Application {
         new SpringApplicationBuilder(Application.class).run(args);
     }
 
-
     @Bean
     public ServletRegistrationBean jerseyServlet() {
         Map<String,String> params = new HashMap<String,String>();

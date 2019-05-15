@@ -29,7 +29,8 @@ public class SqlInitialization{
     public DataSource dataSource() {
 
         URI dbUri = null;
-        String DATABASE_URL = System.getenv().get("DATABASE_URL");
+//        String DATABASE_URL = System.getenv().get("DATABASE_URL");
+        String DATABASE_URL = "postgres://asfandyar@localhost:5432/handex_precheck";
         try {
             dbUri = new URI(DATABASE_URL);
         } catch (URISyntaxException e) {
@@ -37,9 +38,9 @@ public class SqlInitialization{
             log.debug("DATABASE_URL environment variable does not exist");
         }
         String username = dbUri.getUserInfo().split(":")[0];
-        String password = dbUri.getUserInfo().split(":")[1];
+//        String password = dbUri.getUserInfo().split(":")[1];
+//        log.info(password);
         log.info(username);
-        log.info(password);
 
         String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath() + "?sslmode=require";
 
@@ -47,7 +48,7 @@ public class SqlInitialization{
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl(dbUrl);
         dataSource.setUsername(username);
-        dataSource.setPassword(password);
+//        dataSource.setPassword(password);
 
         try {
             log.info(dataSource.getConnection().getCatalog());
@@ -72,8 +73,8 @@ public class SqlInitialization{
         return entityManagerFactoryBean;
     }
 
-    protected Properties buildHibernateProperties()
-    {
+    protected Properties buildHibernateProperties(){
+
         Properties hibernateProperties = new Properties();
 
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
@@ -89,7 +90,6 @@ public class SqlInitialization{
         //Audit History flags
         hibernateProperties.setProperty("org.hibernate.envers.store_data_at_delete", "true");
         hibernateProperties.setProperty("org.hibernate.envers.global_with_modified_flag", "true");
-
         hibernateProperties.setProperty("hibernate.enable_lazy_load_no_trans","true");
 
         return hibernateProperties;

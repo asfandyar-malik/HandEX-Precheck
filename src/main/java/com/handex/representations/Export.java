@@ -16,27 +16,101 @@ public class Export {
 
     @Column(name = "createdat", updatable = false)
     @CreationTimestamp
-    private Date createdat;
+    public Date createdat;
 
     @Column(name = "company_name")
-    private String companyName;
+    public String companyName;
 
     @Column(name = "email")
-    private String email;
+    public String email;
 
     @Column(name = "importer_country")
-    private String importerCountry;
+    public String importerCountry;
 
     @Column(name = "payment_term")
-    private String paymentTerm;
+    public String paymentTerm;
 
     @Column(name = "contract_value")
-    private Integer contractValue;
+    public Integer contractValue;
 
     @Column(name = "industry_type")
-    private String industryType;
+    public String industryType;
 
     @Column(name = "project_description")
-    private String projectDescription;
+    public String projectDescription;
 
+    public Export(Date createdat, String companyName, String email, String importerCountry, String paymentTerm, Integer contractValue, String industryType, String projectDescription) {
+        this.createdat = createdat;
+        this.companyName = companyName;
+        this.email = email;
+        this.importerCountry = importerCountry;
+        this.paymentTerm = paymentTerm;
+        this.contractValue = contractValue;
+        this.industryType = industryType;
+        this.projectDescription = projectDescription;
+    }
+
+    public Date getCreatedat() {
+        return createdat;
+    }
+
+    public void setCreatedat(Date createdat) {
+        this.createdat = createdat;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getImporterCountry() {
+        return importerCountry;
+    }
+
+    public void setImporterCountry(String importerCountry) {
+        this.importerCountry = importerCountry;
+    }
+
+    public String getPaymentTerm() {
+        return paymentTerm;
+    }
+
+    public void setPaymentTerm(String paymentTerm) {
+        this.paymentTerm = paymentTerm;
+    }
+
+    public Integer getContractValue() {
+        return contractValue;
+    }
+
+    public void setContractValue(Integer contractValue) {
+        this.contractValue = contractValue;
+    }
+
+    public String getIndustryType() {
+        return industryType;
+    }
+
+    public void setIndustryType(String industryType) {
+        this.industryType = industryType;
+    }
+
+    public String getProjectDescription() {
+        return projectDescription;
+    }
+
+    public void setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
+    }
 }
