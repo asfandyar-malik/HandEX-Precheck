@@ -50,7 +50,13 @@ public class ExportResource {
         return export;
     }
 
-    public void letsComputer(){
+    @GET
+    @Path("public/exports/computeOffer")
+    public String letsCompute(){
+
+        String output = String.valueOf(industryBetasDao.getOne(Long.valueOf(1)));
+
+        return output;
 
     }
 
