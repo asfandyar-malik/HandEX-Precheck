@@ -4,6 +4,9 @@ import com.handex.persistence.CompanyRiskPremiumsDao;
 import com.handex.persistence.ExportDao;
 import com.handex.persistence.IndustryBetasDao;
 import com.handex.representations.Export;
+import com.handex.representations.IndustryBetas;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +16,7 @@ import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
@@ -20,6 +24,8 @@ import javax.ws.rs.core.Response;
 @Component
 @Transactional
 public class ExportResource {
+
+    private static final Logger log = LogManager.getLogger(ExportResource.class);
 
     private final ExportDao exportDao;
 
@@ -54,10 +60,16 @@ public class ExportResource {
     @Path("public/exports/computeOffer")
     public String letsCompute(){
 
-        String output = String.valueOf(industryBetasDao.getOne(Long.valueOf(1)));
+        String beta1 = String.valueOf(industryBetasDao.getOne(Long.valueOf(1)));
+//        String beta2 = String.valueOf(industryBetasDao.findByIndustryName("Auto & Truck parts"));
 
-        return output;
+//        ArrayList<IndustryBetas> beta3 = industryBetasDao.findByEhNace(22);
+//        beta3.forEach((k) -> System.out.println("beta3 : " + k));
+
+        System.out.println("beta1: "+ beta1);
+//        System.out.println("beta2: "+ beta2);
+
+        return beta1;
 
     }
-
 }
