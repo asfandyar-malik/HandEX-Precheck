@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @JsonIgnoreProperties
@@ -18,21 +19,26 @@ public class Export {
     @CreationTimestamp
     public Date createdat;
 
+    @NotNull
     @Column(name = "company_name")
     public String companyName;
 
+    @NotNull
     @Column(name = "email")
     public String email;
 
+    @NotNull
     @Column(name = "importer_country")
     public String importerCountry;
 
     @Column(name = "payment_term")
     public String paymentTerm;
 
+    @NotNull
     @Column(name = "contract_value")
     public Integer contractValue;
 
+    @NotNull
     @Column(name = "industry_type")
     public String industryType;
 
