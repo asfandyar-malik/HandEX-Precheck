@@ -29,8 +29,8 @@ public class SqlInitialization{
     public DataSource dataSource() {
 
         URI dbUri = null;
-//        String DATABASE_URL = System.getenv().get("DATABASE_URL");
-        String DATABASE_URL = "postgres://asfandyar@localhost:5432/handex_precheck";
+        String DATABASE_URL = System.getenv().get("DATABASE_URL");
+//        String DATABASE_URL = "postgres://asfandyar@localhost:5432/handex_precheck";
         try {
             dbUri = new URI(DATABASE_URL);
         } catch (URISyntaxException e) {
@@ -38,17 +38,17 @@ public class SqlInitialization{
             log.debug("DATABASE_URL environment variable does not exist");
         }
         String username = dbUri.getUserInfo().split(":")[0];
-//        String password = dbUri.getUserInfo().split(":")[1];
+        String password = dbUri.getUserInfo().split(":")[1];
 //        log.info(password);
         log.info(username);
 
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath(); //+ "?sslmode=require"
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath() + "?sslmode=require";
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl(dbUrl);
         dataSource.setUsername(username);
-//        dataSource.setPassword(password);
+        dataSource.setPassword(password);
 
         try {
             log.info(dataSource.getConnection().getCatalog());
@@ -81,7 +81,7 @@ public class SqlInitialization{
         hibernateProperties.setProperty("hibernate.show_sql", "false");
         hibernateProperties.setProperty("hibernate.use_sql_comments", "false");
         hibernateProperties.setProperty("hibernate.format_sql", "false");
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "none");
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");
         hibernateProperties.setProperty("hibernate.generate_statistics", "false");
         hibernateProperties.setProperty("javax.persistence.validation.mode", "none");
         hibernateProperties.setProperty("hibernate.generate_statistics", "false");
