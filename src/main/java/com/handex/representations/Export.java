@@ -39,6 +39,9 @@ public class Export {
     @Column(name = "project_description")
     public String projectDescription;
 
+    public Export() {
+    }
+
     public Export(Date createdat, String companyName, String email, String importerCountry, String paymentTerm, Integer contractValue, String industryType, String projectDescription) {
         this.createdat = createdat;
         this.companyName = companyName;

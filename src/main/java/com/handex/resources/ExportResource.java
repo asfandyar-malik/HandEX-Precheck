@@ -25,6 +25,12 @@ public class ExportResource {
         this.exportDao = exportDao;
     }
 
+    @POST
+    @Path("public/exports")
+    public Export save(@Valid Export export) {
+        return exportDao.save(export);
+    }
+
     @GET
     @Path("public/exports/{id}")
     public Export getExport(@PathParam("id")long id) {
@@ -35,9 +41,4 @@ public class ExportResource {
         return export;
     }
 
-    @POST
-    @Path("public/exports")
-    public Export save(@Valid Export export) {
-        return exportDao.save(export);
-    }
 }
