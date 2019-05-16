@@ -1,0 +1,97 @@
+Industry Name English,EH Equivalent Industry Name English,EH Equivalent Industry Name German,EH NACE,True NACE,Levered Beta,Average Levered Beta
+Advertising (General),"Publish, print, reproduct recorded media","Herstellung von Druckerzeugnissen(Vervielfältigung von bespielten Ton, Bild und Datenträgern)",22,,1.22,1.17
+Advertising (Broadcasting),"Publish, print, reproduct recorded media","Herstellung von Druckerzeugnissen(Vervielfältigung von bespielten Ton, Bild und Datenträgern)",22,,1.02,
+Advertising (Publishing & Newspapers),"Publish, print, reproduct recorded media","Herstellung von Druckerzeugnissen(Vervielfältigung von bespielten Ton, Bild und Datenträgern)",22,,1.26,
+Aerospace/Defense,Public administration & defence,"Öffentliche Verwaltung, Verteidigung (Sozialversicherung)",75,,1.24,N/A
+Air Transport,Air transport,Luftfahrt,62,,1.02,N/A
+Apparel (General Textile),Manufacture of textiles,Herstellung von Textilien,17,,0.93,N/A
+Apparel (Dress),"M/f wearing apparel, dress & dye of fur",Herstellung von Bekleidung,18,,0.93,N/A
+Apparel (Leather),"Tann, dress leather, M/f luggage, etc",Herstellung von Leder (Lederwaren und Schuhen),19,,0.93,N/A
+Apparel (Shoe),"Tann, dress leather, M/f luggage, etc",Herstellung von Leder (Lederwaren und Schuhen),19,,0.75,N/A
+Auto & Truck (Vehicle),"M/f of motor vehicles, trailers",Herstellung von Kraftwagen und Kraftwagenteilen,34,,0.79,N/A
+Auto & Truck parts,M/f of other transport equipment,Sonstiger Fahrzeugbau,35,,0.79,N/A
+Auto Parts (General),M/f of other transport equipment,Sonstiger Fahrzeugbau,35,,1.17,N/A
+Bank (Money Center),Activities aux to financial intermed,Mit Finanz-und Versicherungsdienstleistungen verbundene Tätigkeiten,67,,0.71,0.90
+Banks (Regional),Activities aux to financial intermed,Mit Finanz-und Versicherungsdienstleistungen verbundene Tätigkeiten,67,,0.57,
+Banks (Brokerage & Investment Banking),Activities aux to financial intermed,Mit Finanz-und Versicherungsdienstleistungen verbundene Tätigkeiten,67,,1.21,
+Banks (Investments & Asset Management),Activities aux to financial intermed,Mit Finanz-und Versicherungsdienstleistungen verbundene Tätigkeiten,67,,1.10,
+Business & Consumer Services,Other business activities,Sonstige Diensleistungen,74,,1.22,N/A
+Radio and TV,"M/f of radio, TV, comm equipt, apparatus","Herstellung von Radio, TV, Kommunikationsgeräten",32,,1.13,N/A
+Chemical (Basic),Manufacture of chemicals products,Herstellung von chemischen Erzeugnissen,24,,1.55,1.51
+Chemical (Diversified),Manufacture of chemicals products,Herstellung von chemischen Erzeugnissen,24,,1.82,
+Chemical (Specialty),Manufacture of chemicals products,Herstellung von chemischen Erzeugnissen,24,,1.17,
+Coal & Related Energy,"Mining of coal, lignite, peat extraction",Kohlenbergbau,10,,1.17,N/A
+Computer Services,Computer and related activities,Computer und verwandte Aktivitäten,72,,1.27,1.32
+Computer Services/ Software (Internet),Computer and related activities,Computer und verwandte Aktivitäten,72,,1.46,
+Computer Services/ Software (System & Application),Computer and related activities,Computer und verwandte Aktivitäten,72,,1.23,
+Computers/Peripherals,"M/f of office machinery, computers",Herstellung von Bürobedarf und Computern,30,,1.68,N/A
+Construction Supplies,Construction,Bau,45,,1.45,1.19
+Construction Building Materials,Construction,Bau,45,,1.10,
+Construction/Engineering,Construction,Bau,45,,1.01,
+Education,Education,Bildung,80,,1.28,N/A
+Electrical Equipment,M/f of electric machin & apparatus nec,Herstellung von elektrischen Ausrüstungen,31,,1.32,1.25
+Electronics (Consumer & Office),M/f of electric machin & apparatus nec,Herstellung von elektrischen Ausrüstungen,31,,1.19,
+Electronics (General),M/f of electric machin & apparatus nec,Herstellung von elektrischen Ausrüstungen,31,,1.02,
+Electronics (Semiconductor),M/f of electric machin & apparatus nec,Herstellung von elektrischen Ausrüstungen,31,,1.34,
+Electronics (Semiconductor Equip),M/f of electric machin & apparatus nec,Herstellung von elektrischen Ausrüstungen,31,,1.39,
+Entertainment (General),"Recreational, cultural, sporting activit","Erbringung von Dienstleistungen des Sports, der Unterhaltung und der Erholung",92,,1.33,1.19
+Entertainment/Recreation,"Recreational, cultural, sporting activit","Erbringung von Dienstleistungen des Sports, der Unterhaltung und der Erholung",92,,0.98,
+Entertainment (Software),"Recreational, cultural, sporting activit","Erbringung von Dienstleistungen des Sports, der Unterhaltung und der Erholung",92,,1.26,
+Environmental & Waste Services,"Sewage & refuse disposal, sanitation etc","Abwasserentsorgung, Beseitigung von Umweltverschmutzungen und sonstige Entsorgung",90,,1.19,N/A
+Farming/Agriculture,"Agriculture, hunting, rltd serv activit","Landwirtschaft,Jagd und damit verbundene Tätigkeiten",1,,0.72,N/A
+Farming/Agriculture (Fishing),"Fishing, fish hatcheries and farms, etc",Fischerei und Aquakultur,5,,0.72,N/A
+Financial Svcs. (Non-bank & Insurance),"Financ intermed (expt ins, pension fund)",Erbringung von Finanzdienstleistungen,65,,0.70,N/A
+Food Processing,"Manufacture of food products, beverages",Herstellung von Nahrungsmitteln und Getränken,15,,0.81,1.22
+Food Wholesalers,"Manufacture of food products, beverages",Herstellung von Nahrungsmitteln und Getränken,15,,1.62,
+Furn/Home Furnishings,"M/f of furniture, manufacturing nec",Herstellung von Möbeln,36,,0.88,N/A
+Green & Renewable Energy,Recycling,"Recycling bzw. Sammlung, Behandlung und Beseitigung von Abfällen (Rückgewinnung)",37,,1.62,N/A
+Healthcare Products,Health and social work,Gesundheits und Sozialwesen,85,,1.12,1.17
+Healthcare Support Services,Health and social work,Gesundheits und Sozialwesen,85,,1.15,
+Heathcare Information and Technology,Health and social work,Gesundheits und Sozialwesen,85,,1.29,
+Hospitals/Healthcare Facilities,Health and social work,Gesundheits und Sozialwesen,85,,1.12,
+Homebuilding,Private households with employed persons,Private Haushalte mit Hauspersonal,95,,0.98,N/A
+Hotel/Gaming,Hotels & restaurants,Beherbergung und Gastronomie,55,,1.01,0.91
+Hotel/Restaurant/Dining,Hotels & restaurants,Beherbergung und Gastronomie,55,,0.80,
+Insurance (General),Insurance & pension funding (expt SS),"Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung)",66,,0.87,0.92
+Insurance (Life),Insurance & pension funding (expt SS),"Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung)",66,,1.11,
+Insurance (Prop/Cas.),Insurance & pension funding (expt SS),"Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung)",66,,0.74,
+Insurance (Reinsurance),Insurance & pension funding (expt SS),"Versicherungen, Rückversicherungen und Pensionskassen (ohne Sozialversicherung)",66,,0.97,
+Machinery,"M/f of machinery, equipment nec",Maschinenbau,29,,1.17,N/A
+Medical Machinery,"M/f of medic, precision, optical instrum",Herstellung von medizinischen und optischen Instrumenten,33,,1.17,1.38
+Medical Drugs (Biotechnology),"M/f of medic, precision, optical instrum",Herstellung von medizinischen und optischen Instrumenten,33,,1.51,
+Medical Drugs (Pharmaceutical),"M/f of medic, precision, optical instrum",Herstellung von medizinischen und optischen Instrumenten,33,,1.47,
+Metals & Mining (Uranium and Thorium Ores),Mining of uranium and thorium ores,Erzbergbau,12,,1.32,N/A
+Metals & Mining (Metal Ores),Mining of metal ores,"Gewinnung von Steinen und Erden, sonstiger Bergbau",13,,1.32,N/A
+Metals & Mining (Mining and Quarrying),Other mining and quarrying,"Erbringung von Dienstleistungen für den Bergbau und für die, Gewinnung von Steinen und Erden",14,,1.32,N/A
+Office Equipment & Services,"M/f of office machinery, computers",Herstellung von Bürobedarf und Computern,30,,1.81,1.75
+Office Computers/Peripherals,"M/f of office machinery, computers",Herstellung von Bürobedarf und Computern,30,,1.68,
+Oil/Gas (Integrated),"Extr. crude petrol, natural gas, n.e.c.",Gewinnung von Erdöl und Erdgas,11,,1.16,1.25
+Oil/Gas (Production and Exploration),"Extr. crude petrol, natural gas, n.e.c.",Gewinnung von Erdöl und Erdgas,11,,1.45,
+Oil/Gas Distribution,"Extr. crude petrol, natural gas, n.e.c.",Gewinnung von Erdöl und Erdgas,11,,1.07,
+Oilfield Svcs/Equip.,"Extr. crude petrol, natural gas, n.e.c.",Gewinnung von Erdöl und Erdgas,11,,1.33,
+Packaging & Container,Packaging & Container,Verpackung & Container,,,1.07,N/A
+Paper/Forest Products,"Manufacture of pulp, paper products","Herstellung von Papier, Pappe und Waren daraus",21,,1.40,N/A
+Paper/Forest Products,"Manufacture of wood pdts & corks, etc","Herstellung von Holz, Flecht, Korb und Korkwaren (ohne Möbel)",20,,1.40,N/A
+Paper/Forest Products,"Forestry, logging, rltd svce activities",Forstwirtschaft und Holzeinschlag,2,,1.40,N/A
+Precious Metals,"M/f fabr metal pdts (expt mach, equipt)",Herstellung von Metallerzeugnissen,28,,1.19,N/A
+R.E.I.T.,Real estate activities,Grundstücks und Wohnungswesen,70,,0.68,1.15
+Real Estate (Development),Real estate activities,Grundstücks und Wohnungswesen,70,,1.19,
+Real Estate (General/Diversified),Real estate activities,Grundstücks und Wohnungswesen,70,,1.36,
+Real Estate (Operations & Services),Real estate activities,Grundstücks und Wohnungswesen,70,,1.35,
+Retail (Automotive),"Sale, maintenance, repair motor vehicles",Handel mit Kraftfahrzeugen (Instandhaltung und Reparatur von Kraftfahrzeugen),50,,1.15,N/A
+Retail (Building Supply),"Retail trade, repair person, hhold goods",Einzelhandel (ohne Handel mit Kraftfahrzeugen),52,,1.12,1.19
+Retail (Distributors),"Retail trade, repair person, hhold goods",Einzelhandel (ohne Handel mit Kraftfahrzeugen),52,,1.44,
+Retail (General),"Retail trade, repair person, hhold goods",Einzelhandel (ohne Handel mit Kraftfahrzeugen),52,,0.91,
+Retail (Online),"Retail trade, repair person, hhold goods",Einzelhandel (ohne Handel mit Kraftfahrzeugen),52,,1.42,
+Retail (Special Lines),"Retail trade, repair person, hhold goods",Einzelhandel (ohne Handel mit Kraftfahrzeugen),52,,1.07,
+Rubber& Tires,Manufacture of rubber & plastic products,Herstellung von Gummi und Kunststoffwaren,25,,0.42,N/A
+Telecom (Wireless),Post and telecommunications,Post und Telekommunikation,64,,1.26,1.19
+Telecom. Equipment,Post and telecommunications,Post und Telekommunikation,64,,1.09,
+Telecom. Services,Post and telecommunications,Post und Telekommunikation,64,,1.22,
+Tobacco,Manufacture of tobacco products,Tabakverarbeitung,16,,1.29,N/A
+Transportation (Railroads),"Land transport, transport via pipeline",Landverkehr und Transport in Rohrfernleitungen,60,,2.47,1.81
+Transportation (Land),"Land transport, transport via pipeline",Landverkehr und Transport in Rohrfernleitungen,60,,1.14,
+Transportation (Water),Water transport,Schifffahrt,61,,0.42,N/A
+Utility (Water),Water Collectn purificatn & distrib,Wasserversorgung,41,,0.42,N/A
+Utility (Water),"Electricity, gas, steam, hot water suppl","Energie-, Gas- und Warmwasserversorgung",40,,0.42,N/A
+Other,Other services activities,Erbringung von sonstigen Dienstleistungen,93,,1.12,N/A
