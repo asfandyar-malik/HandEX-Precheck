@@ -1,10 +1,9 @@
 package com.handex.resources;
 
-import com.handex.persistence.CompanyRiskPremiumsDao;
+import com.handex.persistence.CompanyRiskPremiumDao;
 import com.handex.persistence.ExportDao;
-import com.handex.persistence.IndustryBetasDao;
+import com.handex.persistence.IndustryBetaDao;
 import com.handex.representations.Export;
-import com.handex.representations.IndustryBetas;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,6 @@ import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
 
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,13 +25,13 @@ public class ExportResource {
 
     private static final Logger log = LogManager.getLogger(ExportResource.class);
 
-    private final ExportDao exportDao;
+    private ExportDao exportDao;
 
     @Autowired
-    private IndustryBetasDao industryBetasDao;
+    private IndustryBetaDao industryBetaDao;
 
     @Autowired
-    private CompanyRiskPremiumsDao companyRiskPremiumsDao;
+    private CompanyRiskPremiumDao companyRiskPremiumsDao;
 
     @Inject
     public ExportResource(ExportDao exportDao) {
@@ -60,7 +58,7 @@ public class ExportResource {
     @Path("public/exports/computeOffer")
     public String letsCompute(){
 
-        String beta1 = String.valueOf(industryBetasDao.getOne(Long.valueOf(1)));
+        String beta1 = String.valueOf(industryBetaDao.getOne(Long.valueOf(1)));
 //        String beta2 = String.valueOf(industryBetasDao.findByIndustryName("Auto & Truck parts"));
 
 //        ArrayList<IndustryBetas> beta3 = industryBetasDao.findByEhNace(22);

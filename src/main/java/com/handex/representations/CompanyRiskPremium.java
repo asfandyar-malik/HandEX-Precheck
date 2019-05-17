@@ -8,8 +8,8 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @JsonIgnoreProperties
-@Entity(name = "country_risk_premiums")
-public class CompanyRiskPremiums {
+@Entity(name = "country_risk_premium")
+public class CompanyRiskPremium {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +27,8 @@ public class CompanyRiskPremiums {
     @Column(name = "country_risk_premium")
     public String countryRiskPremium;
 
+    public CompanyRiskPremium(){}
+
     @Override
     public String toString() {
         return "CompanyRiskPremiums{" +
@@ -37,6 +39,7 @@ public class CompanyRiskPremiums {
                 ", countryRiskPremium='" + countryRiskPremium + '\'' +
                 '}';
     }
+
 
     public Long getId() {
         return id;

@@ -7,8 +7,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @JsonIgnoreProperties
-@Entity(name = "industry_betas")
-public class IndustryBetas {
+@Entity(name = "industry_beta")
+public class IndustryBeta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class IndustryBetas {
     public String getEhEquivalentIndustryNameGermany;
 
     @Column(name = "eh_nace")
-    public Integer ehNace;
+    public Long ehNace;
 
     @Column(name = "true_nace")
     public String trueNace;
@@ -35,13 +35,11 @@ public class IndustryBetas {
     @Column(name = "average_levered_beta")
     public String averageLeveredBeta;
 
-    public IndustryBetas(){
-
-    }
+    public IndustryBeta(){}
 
     @Override
     public String toString() {
-        return "IndustryBetas{" +
+        return "IndustryBeta{" +
                 "id=" + id +
                 ", industryName='" + industryName + '\'' +
                 ", ehEquivalentIndustryNameEnglish='" + ehEquivalentIndustryNameEnglish + '\'' +
@@ -85,11 +83,11 @@ public class IndustryBetas {
         this.getEhEquivalentIndustryNameGermany = getEhEquivalentIndustryNameGermany;
     }
 
-    public Integer getEhNace() {
+    public Long getEhNace() {
         return ehNace;
     }
 
-    public void setEhNace(Integer ehNace) {
+    public void setEhNace(Long ehNace) {
         this.ehNace = ehNace;
     }
 
