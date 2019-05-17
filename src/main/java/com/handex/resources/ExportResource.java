@@ -120,8 +120,8 @@ public class ExportResource {
             stateResponse = new StateResponse(-1.0, -1.0, Result.REJECTED);
         }
         else {
-            makeHubspotRequest(emailForm, min_interest_rate, max_interest_rate, Result.ACCEPTED);
-            stateResponse = new StateResponse(min_interest_rate, max_interest_rate, Result.ACCEPTED);
+            makeHubspotRequest(emailForm, Double.parseDouble(min_interest_rate_string), Double.parseDouble(max_interest_rate_string), Result.ACCEPTED);
+            stateResponse = new StateResponse(Double.parseDouble(min_interest_rate_string), Double.parseDouble(max_interest_rate_string), Result.ACCEPTED);
         }
 
         return stateResponse.toString();
