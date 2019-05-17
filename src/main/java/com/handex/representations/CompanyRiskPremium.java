@@ -22,7 +22,7 @@ public class CompanyRiskPremium {
     public String ratingBasedDefaultSpread;
 
     @Column(name = "total_equity_risk_premium")
-    public String total_equity_riskPremium;
+    public String totalEquityRiskPremium;
 
     @Column(name = "country_risk_premium")
     public String countryRiskPremium;
@@ -35,7 +35,7 @@ public class CompanyRiskPremium {
                 "id=" + id +
                 ", country='" + country + '\'' +
                 ", ratingBasedDefaultSpread='" + ratingBasedDefaultSpread + '\'' +
-                ", total_equity_riskPremium='" + total_equity_riskPremium + '\'' +
+                ", total_equity_riskPremium='" + totalEquityRiskPremium + '\'' +
                 ", countryRiskPremium='" + countryRiskPremium + '\'' +
                 '}';
     }
@@ -65,12 +65,12 @@ public class CompanyRiskPremium {
         this.ratingBasedDefaultSpread = ratingBasedDefaultSpread;
     }
 
-    public String getTotal_equity_riskPremium() {
-        return total_equity_riskPremium;
+    public String getTotalEquityRiskPremium() {
+        return totalEquityRiskPremium;
     }
 
-    public void setTotal_equity_riskPremium(String total_equity_riskPremium) {
-        this.total_equity_riskPremium = total_equity_riskPremium;
+    public void setTotalEquityRiskPremium(String totalEquityRiskPremium) {
+        this.totalEquityRiskPremium = totalEquityRiskPremium;
     }
 
     public String getCountryRiskPremium() {

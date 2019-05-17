@@ -28,14 +28,14 @@ public class LoggingFilter implements ContainerRequestFilter, ContainerResponseF
 
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {
-        log.info("============= Response Filter=============");
-        log.info("Response Allowed Methods: " +  responseContext.getAllowedMethods());
-        log.info("Response MediaType: " + responseContext.getMediaType());
+        log.info("============= StateResponse Filter=============");
+        log.info("StateResponse Allowed Methods: " +  responseContext.getAllowedMethods());
+        log.info("StateResponse MediaType: " + responseContext.getMediaType());
         log.info("Headers: " + responseContext.getHeaders());
 
         Object entity = responseContext.getEntity();
         if (entity != null) {
-            log.info("Response " + new ObjectMapper().writeValueAsString(entity));
+            log.info("StateResponse " + new ObjectMapper().writeValueAsString(entity));
         }
     }
 }
