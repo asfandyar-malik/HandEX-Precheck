@@ -2,14 +2,14 @@ package com.handex.representations;
 
 public class StateResponse {
 
-    public String minimumInterestOffer;
-    public String maxInterestRateOffer;
+    public Double minimumInterestOffer;
+    public Double maxInterestRateOffer;
     public Result status;
 
     public StateResponse() {
     }
 
-    public StateResponse(String minimumInterestOffer, String maxInterestRateOffer, Result status) {
+    public StateResponse(Double minimumInterestOffer, Double maxInterestRateOffer, Result status) {
         this.minimumInterestOffer = minimumInterestOffer;
         this.maxInterestRateOffer = maxInterestRateOffer;
         this.status = status;

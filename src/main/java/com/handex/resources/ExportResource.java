@@ -27,6 +27,7 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 @Path("")
 @Produces(MediaType.APPLICATION_JSON)
@@ -102,24 +103,31 @@ public class ExportResource {
         Double max_interest_rate = worst_rating + interest_per_factor_max;
 
         DecimalFormat df = new DecimalFormat("###.###");
+        DecimalFormatSymbols sym = DecimalFormatSymbols.getInstance();
+        sym.setDecimalSeparator('.');
+        df.setDecimalFormatSymbols(sym);
+
         String min_interest_rate_string =  df.format(min_interest_rate);
         String max_interest_rate_string = df.format(max_interest_rate);
+
+        System.out.println("min_interest_rate_string: " + min_interest_rate_string);
+        System.out.println("max_interest_rate_string: " + max_interest_rate_string);
 
         if (((contractValueForm < 100000) || (contractValueForm > 5000000))
                 || ((Integer.parseInt(paymentTermForm) < 6) || (Integer.parseInt(paymentTermForm) > 36))){
 
-            makeHubspotRequest(emailForm, "-1,0", "-1.0", Result.REJECTED);
-            stateResponse = new StateResponse("-1,0", "-1.0", Result.REJECTED);
+            makeHubspotRequest(emailForm, -1.0, -1.0, Result.REJECTED);
+            stateResponse = new StateResponse(-1.0, -1.0, Result.REJECTED);
         }
         else {
-            makeHubspotRequest(emailForm, min_interest_rate_string, max_interest_rate_string, Result.ACCEPTED);
-            stateResponse = new StateResponse(min_interest_rate_string, max_interest_rate_string, Result.ACCEPTED);
+            makeHubspotRequest(emailForm, min_interest_rate, max_interest_rate, Result.ACCEPTED);
+            stateResponse = new StateResponse(min_interest_rate, max_interest_rate, Result.ACCEPTED);
         }
 
         return stateResponse.toString();
     }
 
-    public void makeHubspotRequest(String emailForm, String minimum_offer, String maximum_offer, Result preliminary_check_status) throws IOException {
+    public void makeHubspotRequest(String emailForm, Double minimum_offer, Double maximum_offer, Result preliminary_check_status) throws IOException {
 
         HttpClient httpclient = HttpClients.createDefault();
         HttpPost httppost = new HttpPost("https://api.hubapi.com/contacts/v1/contact/email/" + emailForm + "/profile?hapikey=a6cbf9fb-3341-4fb3-a741-262eda57199a");
