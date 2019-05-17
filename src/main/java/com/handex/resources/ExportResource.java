@@ -70,9 +70,7 @@ public class ExportResource {
     @Path("public/exports/computeVorabOffer")
     public String computeVorabCheck(@Valid Export export) throws Exception {
 
-        Result result = Result.WAITING;
         StateResponse stateResponse ;
-
         String companyNameForm = export.companyName;
         String emailForm = export.email;
         String importerCountryForm = export.importerCountry;
@@ -103,23 +101,25 @@ public class ExportResource {
         Double min_interest_rate = best_rating + interest_per_factor_min;
         Double max_interest_rate = worst_rating + interest_per_factor_max;
 
-        if ((contractValueForm < 100000) || (contractValueForm > 500000)){
-            makeHubspotRequest(-1.0, -1.0, Result.REJECTED);
+        if (((contractValueForm < 100000) || (contractValueForm > 5000000))
+                || ((Integer.parseInt(paymentTermForm) < 6) || (Integer.parseInt(paymentTermForm) > 36))){
+
+            makeHubspotRequest(emailForm, -1.0, -1.0, Result.REJECTED);
             stateResponse = new StateResponse(-1.0, -1.0, Result.REJECTED);
         }
         else {
-            makeHubspotRequest(min_interest_rate, max_interest_rate, Result.ACCEPTED);
+            makeHubspotRequest(emailForm, min_interest_rate, max_interest_rate, Result.ACCEPTED);
             stateResponse = new StateResponse(min_interest_rate, max_interest_rate, Result.ACCEPTED);
         }
 
         return stateResponse.toString();
     }
 
-    public void makeHubspotRequest(Double minimum_offer, Double maximum_offer, Result preliminary_check_status) throws IOException {
+    public void makeHubspotRequest(String emailForm, Double minimum_offer, Double maximum_offer, Result preliminary_check_status) throws IOException {
 
         HttpClient httpclient = HttpClients.createDefault();
+//        HttpPost httppost = new HttpPost("https://api.hubapi.com/contacts/v1/contact/email/" + emailForm + "/profile?hapikey=a6cbf9fb-3341-4fb3-a741-262eda57199a");
         HttpPost httppost = new HttpPost("https://api.hubapi.com/contacts/v1/contact/email/asfandyar@handex.co/profile?hapikey=a6cbf9fb-3341-4fb3-a741-262eda57199a");
-
         HttpResponse response = httpclient.execute(httppost);
         HttpEntity entity = response.getEntity();
 
